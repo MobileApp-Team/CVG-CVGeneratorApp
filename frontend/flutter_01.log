@@ -1,0 +1,93 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+FileSystemException: FileSystemException: Cannot create file, path = 'build\flutter_assets\packages/flutter_math_fork/lib/katex_fonts/fonts/KaTeX_Main-Italic.ttf' (OS Error: The process cannot access the file because it is being used by another process.
+, errno = 32)
+
+```
+#0      _File.throwIfError (dart:io/file_impl.dart:629:7)
+#1      _File.createSync (dart:io/file_impl.dart:289:5)
+#2      ForwardingFile.createSync (package:file/src/forwarding/forwarding_file.dart:26:16)
+#3      ErrorHandlingFile.createSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:287:22)
+#4      _runSync (package:flutter_tools/src/base/error_handling_io.dart:600:14)
+#5      ErrorHandlingFile.createSync (package:flutter_tools/src/base/error_handling_io.dart:286:5)
+#6      ErrorHandlingFile.copySync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:324:24)
+#7      _runSync (package:flutter_tools/src/base/error_handling_io.dart:600:14)
+#8      ErrorHandlingFile.copySync (package:flutter_tools/src/base/error_handling_io.dart:323:5)
+#9      writeBundle.<anonymous closure> (package:flutter_tools/src/bundle_builder.dart:194:19)
+<asynchronous suspension>
+#10     Future.wait.<anonymous closure> (dart:async/future.dart:522:21)
+<asynchronous suspension>
+#11     writeBundle (package:flutter_tools/src/bundle_builder.dart:163:3)
+<asynchronous suspension>
+#12     WebDevFS.update (package:flutter_tools/src/isolated/devfs_web.dart:867:9)
+<asynchronous suspension>
+#13     ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:487:35)
+<asynchronous suspension>
+#14     ResidentWebRunner.run.<anonymous closure> (package:flutter_tools/src/isolated/resident_web_runner.dart:284:41)
+<asynchronous suspension>
+#15     asyncGuard.<anonymous closure> (package:flutter_tools/src/base/async_guard.dart:111:24)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.7.12, on Microsoft Windows [Version 10.0.19045.2965], locale en-US)
+    [32m•[39m Flutter version 3.7.12 on channel stable at C:\Hann\flutter\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision 4d9e56e694 (7 weeks ago), 2023-04-17 21:47:46 -0400
+    [32m•[39m Engine revision 1a65d409c7
+    [32m•[39m Dart version 2.19.6
+    [32m•[39m DevTools version 2.20.1
+
+[32m[✓][39m Windows Version (Installed version of Windows is version 10 or higher)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 33.0.0)
+    [32m•[39m Android SDK at C:\Users\search computer\AppData\Local\Android\sdk
+    [32m•[39m Platform android-33, build-tools 33.0.0
+    [32m•[39m Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 11.0.12+7-b1504.28-7817840)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[33m[!][39m Visual Studio - develop for Windows (Visual Studio Community 2022 17.5.3)
+    [32m•[39m Visual Studio at C:\Program Files\Microsoft Visual Studio\2022\Community
+    [32m•[39m Visual Studio Community 2022 version 17.5.33516.290
+    [31m✗[39m Visual Studio is missing necessary components. Please re-run the Visual Studio installer for the "Desktop development with C++" workload, and
+      include these components:
+        MSVC v142 - VS 2019 C++ x64/x86 build tools
+         - If there are multiple build tool versions available, install the latest
+        C++ CMake tools for Windows
+        Windows 10 SDK
+
+[32m[✓][39m Android Studio (version 2021.2)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build 11.0.12+7-b1504.28-7817840)
+
+[32m[✓][39m VS Code (version 1.78.2)
+    [32m•[39m VS Code at C:\Users\search computer\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.66.0
+
+[32m[✓][39m Connected device (3 available)
+    [32m•[39m Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.19045.2965]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript • Google Chrome 113.0.5672.129
+    [32m•[39m Edge (web)        • edge    • web-javascript • Microsoft Edge 113.0.1774.57
+
+[32m[✓][39m HTTP Host Availability
+    [32m•[39m All required HTTP hosts are available
+
+[33m![39m Doctor found issues in 1 category.
+```
