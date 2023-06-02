@@ -1,0 +1,123 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template1</title>
+</head>
+
+<body>
+    <!-- **************************************************** -->
+    <div class="flex">
+        <div class="left">
+            <img src="./images/istockphoto-1176363686-612x612.jpg">
+            
+            <div class="personal">
+                <h3>Contact</h3>
+                Email: <div class="personal_email">johndoe@example.com</div>
+                <br>
+                Phone: <div class="personal_phone">098-403-1038</div>
+                <br>
+                
+                Country: <div class="personal_country">Ethiopia</div>
+                <br>
+                City: <div class="personal_city">Addis Ababa</div>
+            </div>
+            <div class="skill">
+                <h3>Skill</h3>
+                <ul>
+                    <li class="skill_type">python</li>
+                    <!-- <li class="skill_type">web development</li> -->
+                </ul>
+            </div>
+            <div class="project">
+                <h3>Project</h3>
+                <ul>
+                    <li class="projects"><p class="project_title">CV creator mobile app</p>
+                        <p class="link">Github: <a href="https://github.com/MobileApp-Team/CVG-CVGeneratorApp">https://github.com/MobileApp-Team/CVG-CVGeneratorApp</a> </p>
+                    </li>
+                </ul>
+                </div>
+        </div>
+
+        <div class="right">
+            <div class="head">
+                <h2 class="head_name">John Doe</h2>
+                <h4 class="head_title">Software Engineer</h4>
+            </div>
+            <hr>
+            
+            <div class="education">
+                <h2>Education</h2>
+                <p class="education_description">Worked on developing web applications using React and
+                    Node.js,Worked on
+                    developing web applications using
+                    React and Node.js</p>
+            </div>
+            <hr>
+            <div class="experience">
+                <h3>Work Experience</h3>
+                <h4 class="experience_title">Software Engineer</h4>
+                <h4 class="experience_projectTitle">ABC,Company</h4>
+                <p class="experience_description">Worked on developing web applications using React and
+                    Node.js,Worked
+                    on
+                    developing web applications using
+                    React and Node.js</p>
+            </div>
+            <hr>
+            <div class="additionalInfo">
+                <h3>Additional description</h3>
+                <p class="additionalInfo_description">Worked on developing web applications using React and
+                    Node.js,Worked
+                    on developing web applications using
+                    React and Node.js</p>
+            </div>
+        </div>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        img {
+            margin: 10% auto 10% 15%;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+        .flex{
+            display: flex;
+            
+        }
+        .left {
+            padding: 2%;
+            background-color: rgb(43, 26, 26);
+            color: white;
+            margin-right: 2%;
+        }
+        
+        .head{
+            text-align: center;
+        }
+    </style>
+</body>
+<script>
+    document.querySelector(".personal_email").innerHTML = {email};
+    document.querySelector(".personal_phone").innerHTML = {phone};
+    document.querySelector(".personal_country").innerHTML = {country};
+    document.querySelector(".personal_city").innerHTML = {city};
+    document.querySelector(".kill_type").innerHTML = {skill};
+    document.querySelector(".project_title").innerHTML = {project_title};
+    document.querySelector(".head_name").innerHTML = {head_name};
+    document.querySelector(".head_title").innerHTML = {head_title};
+    document.querySelector(".education_description").innerHTML = {education_description};
+    document.querySelector(".experience_title").innerHTML = {experience_title};
+    document.querySelector(".experience_projectTitle").innerHTML = {experience_projectTitle};
+    document.querySelector(".experience_description").innerHTML = {experience_description};
+    document.querySelector(".additionalInfo_description").innerHTML = {additionalInfo};
+    
+</script>
+
+</html>
